@@ -1,0 +1,38 @@
+{
+	"name": "lshorz/geoip",
+	"type": "package",
+	"description": "Laravel geoip Package",
+	"keywords": ["laravel geoip", "ip", "ip location", "location"],
+	"homepage": "https://github.com/lshorz/geoip",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Marven Liao",
+			"email": "lshzhuhai@163.com"
+		}
+	],
+	"require": {
+		"php": ">=7.4",
+		"ext-mbstring": "*",
+		"ext-iconv": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Lshorz\\GeoIp\\": "src/"
+		},
+		"files": [
+			"src/helpers.php"
+		]
+	},
+	"minimum-stability": "dev",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Lshorz\\GeoIp\\GeoIpServiceProvider"
+			],
+			"aliases": {
+				"GeoIp": "Lshorz\\GeoIp\\Facades\\GeoIp"
+			}
+		}
+	}
+}

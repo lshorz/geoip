@@ -31,7 +31,7 @@ class GeoIp
     public function __construct()
     {
         $this->fp = 0;
-        $filename = dirname(__FILE__) . 'data/qqwry.dat';
+        $filename = dirname(__FILE__) . '/data/qqwry.dat';
         if (($this->fp = fopen($filename, 'rb')) !== false) {
             $this->firstIp = $this->getLong();
             $this->lastIp = $this->getLong();
